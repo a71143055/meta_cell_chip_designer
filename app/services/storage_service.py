@@ -20,3 +20,4 @@ class StorageService:
 
     def get_spice_ext(self) -> str:
         return schema.SPICE_EXT
+

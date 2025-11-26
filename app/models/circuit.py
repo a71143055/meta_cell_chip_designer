@@ -1,4 +1,4 @@
-from .primitives import Primitive
+from app.models.primitives import Primitive
 
 class Circuit:
     def __init__(self):

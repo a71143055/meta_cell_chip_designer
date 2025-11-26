@@ -1,9 +1,16 @@
 @echo off
-REM PyInstaller로 exe 패키징. 사소한 에러는 무시하고 진행.
+REM Build a single-file Windows executable with PyInstaller.
+REM Any minor errors are echoed but do not stop the script.
+
 setlocal
+echo == Packaging Meta-Cell Chip Designer ==
 
-echo Building Windows executable...
-pyinstaller -F -n MetaCellDesigner app\main.py --noconfirm || echo "Warning: minor error ignored"
+REM Ensure a clean build
+if exist build rmdir /S /Q build
+if exist dist rmdir /S /Q dist
+if exist __pycache__ rmdir /S /Q __pycache__
 
-echo Build step finished. Check dist\MetaCellDesigner.exe
+pyinstaller -F -n MetaCellDesigner app\main.py --noconfirm || echo [WARN] PyInstaller reported a minor error; continuing.
+
+echo == Done. Check dist\MetaCellDesigner.exe ==
 endlocal

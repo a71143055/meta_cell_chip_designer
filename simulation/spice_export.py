@@ -11,5 +11,7 @@ def export_spice(circuit: Circuit, path: str):
             lines.append(f"L{i} n{i} n{i+1} {p.value}")
         elif p.kind == "CELL":
             lines.append(f"X{i} n{i} n{i+1} meta_cell value={p.value}")
+        else:
+            lines.append(f"* Unknown {p.kind} value={p.value}")
     with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))

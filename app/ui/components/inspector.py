@@ -11,3 +11,4 @@ class InspectorPanel(QWidget):
 
         self.dock = QDockWidget("Inspector")
         self.dock.setWidget(self)
+

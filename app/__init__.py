@@ -1,1 +1,1 @@
-__all__ = []
+# Marks the app directory as a package.

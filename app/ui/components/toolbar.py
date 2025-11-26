@@ -7,5 +7,5 @@ class MainToolbar(QToolBar):
         self.add_capacitor = QPushButton("Add C")
         self.add_inductor = QPushButton("Add L")
         self.add_cell = QPushButton("Add CELL")
-        for b in [self.add_resistor, self.add_capacitor, self.add_inductor, self.add_cell]:
+        for b in (self.add_resistor, self.add_capacitor, self.add_inductor, self.add_cell):
             self.addWidget(b)
