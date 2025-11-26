@@ -1,5 +1,5 @@
-from ...core.serialization import save_project, load_project
-from ...simulation.spice_export import export_spice
+from core.serialization import save_project, load_project
+from simulation.spice_export import export_spice
 
 class ProjectService:
     def __init__(self, canvas, inspector, logger):

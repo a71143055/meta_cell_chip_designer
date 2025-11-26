@@ -1,9 +1,3 @@
-"""
-StorageService
---------------
-스토리지 모듈(local_fs, schema)을 서비스 계층에서 쉽게 접근할 수 있도록 래퍼 제공.
-"""
-
 from storage import local_fs, schema
 
 class StorageService:
